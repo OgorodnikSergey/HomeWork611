@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HomeWork611</string>
+    <string name="text1">Текстовое поле</string>
+    <string name="editext" />
+    <string name="edittext">Текст для ввода</string>
+
+</resources>
