@@ -19,7 +19,9 @@ static final String TEXTVIEW_TEXT = "text";
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
+         textView2 = (TextView)findViewById(R.id.textView2);
+
+
         Log.d("Lifecycle", "onStart()");
         Toast.makeText(MainActivity.this, "onStart()",  Toast.LENGTH_LONG).show();
         textView2.append("\n" + "onStart()");
@@ -37,7 +39,6 @@ static final String TEXTVIEW_TEXT = "text";
         super.onPostCreate(savedInstanceState);
         Log.d("Lifecycle", "onPostCreate()");
         Toast.makeText(MainActivity.this, "onPostCreate()", Toast.LENGTH_LONG).show();
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         textView2.append("\n" + "onPostCreate()");
     }
 
@@ -46,7 +47,6 @@ static final String TEXTVIEW_TEXT = "text";
         super.onStart();
         Log.d("Lifecycle", "onStart()");
         Toast.makeText(MainActivity.this, "onStart()", Toast.LENGTH_LONG).show();
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         textView2.append("\n" + "onStart()");
     }
 
@@ -55,7 +55,6 @@ static final String TEXTVIEW_TEXT = "text";
         super.onResume();
         Log.d("Lifecycle", "onResume()");
         Toast.makeText(MainActivity.this, "onResume()", Toast.LENGTH_LONG).show();
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         textView2.append("\n" + "onResume()");
     }
 
@@ -64,7 +63,6 @@ static final String TEXTVIEW_TEXT = "text";
         super.onPause();
         Log.d("Lifecycle", "onPause()");
         Toast.makeText(MainActivity.this, "onPause()", Toast.LENGTH_LONG).show();
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         textView2.append("\n" + "onPause()");
     }
 
@@ -73,7 +71,6 @@ static final String TEXTVIEW_TEXT = "text";
         super.onStop();
         Log.d("Lifecycle", "onStop()");
         Toast.makeText(MainActivity.this, "onStop()", Toast.LENGTH_LONG).show();
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         textView2.append("\n" + "onStop()");
     }
 
@@ -82,7 +79,6 @@ static final String TEXTVIEW_TEXT = "text";
         super.onDestroy();
         Log.d("Lifecycle", "onDestroy()");
         Toast.makeText(MainActivity.this, "onDestroy()", Toast.LENGTH_LONG).show();
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         textView2.append("\n" + "onDestroy()");
     }
 
@@ -91,7 +87,6 @@ static final String TEXTVIEW_TEXT = "text";
         super.onRestart();
         Log.d("Lifecycle", "onRestart()");
         Toast.makeText(MainActivity.this, "onRestart()", Toast.LENGTH_LONG).show();
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         textView2.append("\n" + "onRestart()");
     }
 
@@ -100,7 +95,6 @@ static final String TEXTVIEW_TEXT = "text";
         super.onPostResume();
         Log.d("Lifecycle", "onPostResume()");
         Toast.makeText(MainActivity.this, "onPostResume()", Toast.LENGTH_LONG).show();
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         textView2.append("\n" + "onPostResume()");
     }
 
@@ -109,7 +103,6 @@ static final String TEXTVIEW_TEXT = "text";
         Log.d("Lifecycle", "onKeyLongPress()");
         Toast.makeText(MainActivity.this, "onKeyLongPress()", Toast.LENGTH_LONG).show();
         textView2.append("\n" + "onKeyLongPress()");
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         return super.onKeyLongPress(keyCode, event);
     }
 
@@ -117,7 +110,6 @@ static final String TEXTVIEW_TEXT = "text";
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         Log.d("Lifecycle", "onKeyDown()");
         Toast.makeText(MainActivity.this, "onKeyDown()", Toast.LENGTH_LONG).show();
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         textView2.append("\n" + "onKeyDown()");
         return super.onKeyDown(keyCode, event);
     }
@@ -127,13 +119,11 @@ static final String TEXTVIEW_TEXT = "text";
         super.onBackPressed();
         Log.d("Lifecycle", "onBackPressed()");
         Toast.makeText(MainActivity.this, "onBackPressed()", Toast.LENGTH_LONG).show();
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         textView2.append("\n" + "onBackPressed()");
     }
 
     @Override
     public void onSaveInstanceState(Bundle saveInstanceState) {
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         saveInstanceState.putString(TEXTVIEW_TEXT, textView2.getText().toString()); // сохраняем текст
         Log.d("Lifecycle", "onSaveInstanceState()");
         Toast.makeText(MainActivity.this, "onSaveInstanceState()", Toast.LENGTH_LONG).show();
@@ -145,7 +135,6 @@ static final String TEXTVIEW_TEXT = "text";
     public void onRestoreInstanceState(Bundle onRestoreInstanceState) {
         Log.d("Lifecycle", "onRestoreInstanceState()");
         Toast.makeText(MainActivity.this, "onRestoreInstanceState()", Toast.LENGTH_LONG).show();
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
         textView2.append("\n" + "onRestoreInstanceState()");
         super.onRestoreInstanceState(onRestoreInstanceState);
     }
